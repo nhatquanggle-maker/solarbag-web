@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   Custom Font Declarations
+   ========================================================================== */
+
+/* 1FTV VIP Boring Time - Tiêu đề, poster, khẩu hiệu */
+@font-face {
+  font-family: '1FTV VIP Boring Time';
+  src: local('1FTV VIP Boring Time'),
+       local('1FTV-VIP-Boring-Time'),
+       local('Boring Time'),
+       url('/assets/fonts/1FTV-VIP-Boring-Time.woff2') format('woff2'),
+       url('/assets/fonts/1FTV-VIP-Boring-Time.ttf') format('truetype'),
+       url('/assets/fonts/1FTV-VIP-Boring-Time.otf') format('opentype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Junegull - Placeholder hook nếu có file font cục bộ đã việt hóa */
+@font-face {
+  font-family: 'Junegull';
+  src: local('Junegull'),
+       url('/assets/fonts/junegull.woff2') format('woff2'),
+       url('/assets/fonts/junegull.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   Base Typography & Colors per Brand Guidelines
+   ========================================================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Nội dung - Font bo tròn Nunito hỗ trợ 100% tiếng Việt */
+    font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+    color: #232622; /* Mực than */
+    background-color: #fbf9f4;
+  }
+
+  /* Tiêu đề - Font Việt hóa 1FTV VIP Boring Time (fallback Baloo 2 bo tròn vui tươi) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: '1FTV VIP Boring Time', 'Baloo 2', 'Nunito', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* ==========================================================================
+   Utility Typography Classes
+   ========================================================================== */
+@layer utilities {
+  .font-headline {
+    font-family: '1FTV VIP Boring Time', 'Baloo 2', 'Nunito', sans-serif !important;
+  }
+
+  .font-serif-subheading {
+    font-family: 'Noto Serif', Georgia, serif !important;
+  }
+
+  .font-handwriting {
+    font-family: 'Mansalva', cursive !important;
+  }
+
+  /* Tự động map các class cũ sang font chuẩn mới */
+  [class*="font-['Roboto_Condensed']"] {
+    font-family: '1FTV VIP Boring Time', 'Baloo 2', 'Nunito', sans-serif !important;
+  }
+
+  [class*="font-['Lora']"] {
+    font-family: 'Noto Serif', Georgia, serif !important;
+  }
+}
+
+/* Custom delicate scrollbar matching Brand Palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E3DCC8; /* Giấy kem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8FA8B6; /* Sương mù */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5E7A45; /* Rêu núi */
+}

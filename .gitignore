@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic / IDE
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Dependencies & Build Output
+node_modules
+dist
+dist-ssr
+*.local
+
+# SQLite temporary journal files
+solarbag.db-shm
+solarbag.db-wal
+
+# Large Figma dumps & one-off raw JSON
+figma_nodes.json
+pages_dump.json
+figma_image_map.json
+image_contexts.json
+*.pyc
+__pycache__
+scripts/
+
