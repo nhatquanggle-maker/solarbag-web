@@ -121,7 +121,7 @@ export default function TrailsPage() {
             Đừng để năng lượng là điều bạn quên chuẩn bị.
           </h2>
           <p className="text-xs sm:text-sm text-[#4a5548] max-w-lg mx-auto">
-            Tạo danh sách thiết bị điện tử và tính toán thời gian sạc trước khi lên đường với công cụ lập kế hoạch mẫu của SolarBag.
+            Tạo danh sách thiết bị điện tử và tính toán thời gian sạc trước khi lên đường với công cụ lập kế hoạch mẫu của GuiNang.
           </p>
           <div className="pt-2">
             <Link

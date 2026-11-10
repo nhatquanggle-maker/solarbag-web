@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PRODUCTS } from '../data/mockData';
+import { PRODUCTS, BRAND_INFO } from '../data/mockData';
 import { useCart } from '../context/CartContext';
 import { 
   Check, 
@@ -11,22 +11,22 @@ import {
   Smartphone, 
   Sparkles,
   ArrowRight,
-  RotateCw,
-  Layers
+  Layers,
+  Factory
 } from 'lucide-react';
 
 export default function ProductProPage() {
   const { addToCart } = useCart();
-  const product = PRODUCTS.find(p => p.id === 'solarbag-pro');
-  const [selectedBattery, setSelectedBattery] = useState('10.000 mAh');
+  const product = PRODUCTS.find(p => p.id === 'guinang-trail' || p.id === 'solarbag-pro') || PRODUCTS[0];
   const [activeTab, setActiveTab] = useState(0);
 
   if (!product) return null;
 
   const galleryImages = [
-    { title: 'Tổng thể balo', src: product.image },
-    { title: 'Tấm quang điện CIGS', src: '/assets/images/fa344fb966908adf2a5e47150da8675b1bf7804b.png' },
-    { title: 'Bối cảnh thực địa', src: '/assets/images/77412110c5deb516750882d297c1f3af65e01093.png' },
+    { title: 'Tổng thể GuiNang Trail', src: product.image },
+    { title: 'Cụm đèn Solar Lamp tháo rời', src: '/assets/images/7979fa915a7086e80d0b025294ffb7f5ae203daa.png' },
+    { title: 'Tấm quang điện 5V-3W', src: '/assets/images/fa344fb966908adf2a5e47150da8675b1bf7804b.png' },
+    { title: 'Bối cảnh thực địa leo núi', src: '/assets/images/77412110c5deb516750882d297c1f3af65e01093.png' },
   ];
 
   return (
@@ -50,12 +50,12 @@ export default function ProductProPage() {
             </div>
 
             {/* Thumbnail selectors */}
-            <div className="flex gap-4">
+            <div className="flex gap-4 overflow-x-auto pb-1">
               {galleryImages.map((img, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveTab(idx)}
-                  className={`flex-1 p-2 bg-white rounded-xl border text-center transition-all ${
+                  className={`flex-1 min-w-[100px] p-2 bg-white rounded-xl border text-center transition-all ${
                     activeTab === idx
                       ? 'border-[#041d15] bg-[#f4f0e6] ring-2 ring-[#041d15]/10'
                       : 'border-[#e2ded4] hover:bg-[#fbf9f4]'
@@ -74,13 +74,13 @@ export default function ProductProPage() {
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-3">
               <span className="text-xs font-mono font-bold tracking-widest text-[#7c8663] uppercase">
-                FLAGSHIP ADVENTURE SERIES
+                FLAGSHIP ADVENTURE SERIES · 35L–40L
               </span>
               <h1 className="font-headline text-4xl sm:text-5xl font-bold text-[#041d15]">
                 {product.name}
               </h1>
-              <p className="font-serif italic text-[#efbc5c] text-lg">
-                Năng lượng cho những bước chân tự do.
+              <p className="font-serif italic text-[#c2562b] text-lg font-semibold">
+                Nắng theo chân, sáng muôn miền.
               </p>
               <p className="text-sm text-[#4a5548] leading-relaxed">
                 {product.description}
@@ -93,44 +93,29 @@ export default function ProductProPage() {
                 <span className="font-headline text-3xl font-bold text-[#041d15]">
                   {product.priceFormatted}
                 </span>
-                <span className="text-xs font-mono font-semibold text-[#7c8663]">
-                  Giá mục tiêu · Early-Bird (-20%)
+                <span className="text-xs font-mono font-semibold text-[#5e7a45]">
+                  Giá niêm yết thương mại chính thức
                 </span>
               </div>
               <p className="text-xs text-[#6c776b]">
-                Dự kiến giao hàng đợt 1 kèm Hộ chiếu số NFC và bảo hành 12 tháng.
+                Trực tiếp lắp ráp và hoàn thiện tại Xưởng Trạm Nắng (Đà Nẵng). Tích hợp chip NFC Product Passport và bảo hành chính hãng 12 tháng.
               </p>
             </div>
 
-            {/* Options */}
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <label className="text-xs font-mono font-bold uppercase text-[#7c8663] block">
-                  Tùy chọn dung lượng pin BMS
-                </label>
-                <div className="grid grid-cols-2 gap-3">
-                  {['5.000 mAh', '10.000 mAh'].map((cap) => (
-                    <button
-                      key={cap}
-                      onClick={() => setSelectedBattery(cap)}
-                      className={`p-3 rounded-lg border text-sm font-headline font-bold text-center transition-all ${
-                        selectedBattery === cap
-                          ? 'bg-[#041d15] text-[#efbc5c] border-[#041d15]'
-                          : 'bg-white text-[#1e261e] border-[#e2ded4] hover:bg-[#f4f0e6]'
-                      }`}
-                    >
-                      {cap} {cap === '10.000 mAh' && '★ Khuyên dùng'}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Fast specs preview */}
-              <div className="grid grid-cols-2 gap-2 text-xs font-mono text-[#4a5548] p-3 rounded-xl bg-white border border-[#e2ded4]">
-                <div>• Quang điện: CIGS 15W</div>
-                <div>• Chống nước: IPX6</div>
-                <div>• Dung tích: 35 Lít</div>
-                <div>• Quai đeo: Trợ lực EVA</div>
+            {/* Fast specs preview */}
+            <div className="space-y-3">
+              <span className="text-xs font-mono font-bold uppercase text-[#7c8663] block">
+                Thông số cốt lõi từ hồ sơ thiết kế
+              </span>
+              <div className="grid grid-cols-2 gap-2 text-xs font-mono text-[#4a5548] p-4 rounded-xl bg-white border border-[#e2ded4] shadow-sm">
+                <div>• Pin lưu trữ: <strong>5.000 mAh (37 Wh)</strong></div>
+                <div>• Trọng lượng: <strong>1.570g (≤ 1.600g)</strong></div>
+                <div>• Quang điện: <strong>2× Solar 5V–3W (6W)</strong></div>
+                <div>• Đèn tháo rời: <strong>Solar Lamp 70g (LED 3W)</strong></div>
+                <div>• Mạch sạc: <strong>TP4056 + MOSFET IRF4905</strong></div>
+                <div>• Vải thân: <strong>Ripstop 420D–600D phủ TPU</strong></div>
+                <div>• Đáy chịu lực: <strong>PET 900D viền xám than</strong></div>
+                <div>• Khung trợ lực: <strong>PE/nhôm + Đai ngực & hông</strong></div>
               </div>
             </div>
 
@@ -138,15 +123,15 @@ export default function ProductProPage() {
             <div className="space-y-3 pt-2">
               <button
                 onClick={() => addToCart(product, 1)}
-                className="w-full py-4 rounded-xl bg-[#041d15] text-[#efbc5c] hover:bg-[#072b20] font-headline font-bold text-base tracking-wide transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl bg-[#041d15] text-[#efbc5c] hover:bg-[#072b20] font-headline font-bold text-base tracking-wide transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer"
               >
-                Đặt trước với giá Early-Bird 1.650.000đ
+                Đặt mua GuiNang Trail — 1.500.000đ
               </button>
 
               <div className="flex items-center justify-center gap-4 text-xs font-mono text-[#7c8663] pt-1">
-                <span>✓ 1 đổi 1 trong 30 ngày</span>
+                <span>✓ Kiểm định IQC/QC</span>
                 <span>✓ Bảo hành 12 tháng</span>
-                <span>✓ Miễn phí vận chuyển</span>
+                <span>✓ Trợ giá chéo cho Edu</span>
               </div>
             </div>
 
@@ -155,34 +140,36 @@ export default function ProductProPage() {
         </div>
       </section>
 
-      {/* 2. ĐIỆN Ở TRONG BALO. TỰ DO Ở PHÍA TRƯỚC. */}
+      {/* 2. ĐẶC ĐIỂM KỸ THUẬT & CẢI TIẾN THỰC ĐỊA */}
       <section className="bg-[#f5f2e9] py-20 border-y border-[#e2ded4]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-mono font-bold tracking-widest text-[#7c8663] uppercase">
-              ĐƯỢC NGHĨ TỪ CUNG ĐƯỜNG
+              CẢI TIẾN TỪ KHẢO SÁT & THỰC ĐỊA
             </span>
             <h2 className="font-headline text-3xl sm:text-4xl font-bold text-[#041d15]">
-              Điện ở trong balo. Tự do ở phía trước.
+              Khắc phục nhược điểm của balo solar hiện có
             </h2>
             <p className="text-sm text-[#4a5548]">
-              Mỗi chi tiết cấu tạo của SolarBag Pro đều được tinh chỉnh dựa trên phản hồi của cộng đồng trekking thực địa.
+              Dựa trên phân tích 40 bản ghi khảo sát chuyên sâu về tình trạng sạc chập chờn khi có bóng râm và độ bền linh kiện.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {product.features.map((feat, idx) => (
-              <div key={idx} className="p-8 rounded-2xl bg-white border border-[#e2ded4] shadow-sm space-y-3">
-                <span className="text-xs font-mono font-bold text-[#efbc5c] bg-[#041d15] px-2.5 py-1 rounded">
-                  0{idx + 1}
-                </span>
-                <h3 className="font-headline text-xl font-bold text-[#041d15] pt-2">
-                  {feat.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#4a5548] leading-relaxed">
-                  {feat.desc}
-                </p>
+              <div key={idx} className="p-6 rounded-2xl bg-white border border-[#e2ded4] shadow-sm space-y-3 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-mono font-bold text-[#efbc5c] bg-[#041d15] px-2.5 py-1 rounded inline-block">
+                    0{idx + 1}
+                  </span>
+                  <h3 className="font-headline text-lg font-bold text-[#041d15] pt-3">
+                    {feat.title}
+                  </h3>
+                  <p className="text-xs text-[#4a5548] leading-relaxed pt-2">
+                    {feat.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -190,17 +177,17 @@ export default function ProductProPage() {
         </div>
       </section>
 
-      {/* 3. HIỂU RÕ THỨ BẠN MANG THEO — BOM & SPEC TABLE */}
+      {/* 3. BẢNG THÔNG SỐ VẬT TƯ & KỸ THUẬT CHI TIẾT (BOM) */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-2">
           <span className="text-xs font-mono font-bold tracking-widest text-[#7c8663] uppercase">
-            CẤU TẠO & THÔNG SỐ BOM
+            CẤU TẠO CHI TIẾT THEO HỒ SƠ DỰ ÁN
           </span>
           <h2 className="font-headline text-3xl font-bold text-[#041d15]">
-            Hiểu rõ thứ bạn mang theo.
+            Bảng thông số kỹ thuật GuiNang Trail
           </h2>
           <p className="text-sm text-[#4a5548]">
-            Thông số kỹ thuật nguyên mẫu SolarBag Pro chuẩn bị kiểm định.
+            Đạt chuẩn kiểm định vật liệu ISO 13934-1, ISO 811 và an toàn pin IEC 62133-2 / UN 38.3.
           </p>
         </div>
 
@@ -216,51 +203,51 @@ export default function ProductProPage() {
         </div>
       </section>
 
-      {/* 4. SỬA ĐƯỢC. KẾT NỐI ĐƯỢC. ĐI TIẾP ĐƯỢC. */}
+      {/* 4. SẢN XUẤT TẠI TRẠM NẮNG & BẢO HÀNH */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span className="text-xs font-mono font-bold tracking-widest text-[#7c8663] uppercase">
-            ĐỒNG HÀNH SAU MỖI CHUYẾN ĐI
+            HẬU MÃI & TRÁCH NHIỆM VÒNG ĐỜI
           </span>
           <h2 className="font-headline text-3xl font-bold text-[#041d15]">
-            Sửa được. Kết nối được. Đi tiếp được.
+            Sản xuất có trách nhiệm. Bảo hành bền vững.
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-8 rounded-2xl bg-white border border-[#e2ded4] space-y-4">
             <h3 className="font-headline text-xl font-bold text-[#041d15]">
-              Bảo hành & sửa chữa
+              Xưởng Trạm Nắng Đà Nẵng
             </h3>
             <p className="text-xs text-[#4a5548] leading-relaxed">
-              12 tháng cho tấm pin CIGS và vi mạch sạc BMS; 6 tháng đèn LED. Hỗ trợ thay thế khóa kéo, đệm quai trọn vòng đời sản phẩm.
+              Mặt bằng 180 m² tại Đà Nẵng với 8 phân khu khép kín: từ kiểm định IQC vật tư, lắp ráp Solar Lamp, kiểm tra mối hàn đến hậu mãi RMA chuyên trách.
             </p>
-            <Link to="/support/warranty" className="text-xs font-mono font-bold text-[#041d15] hover:text-[#efbc5c] inline-block">
-              Xem chính sách bảo hành ↗
+            <Link to="/about/story" className="text-xs font-mono font-bold text-[#041d15] hover:text-[#efbc5c] inline-block">
+              Khám phá Xưởng Trạm Nắng ↗
             </Link>
           </div>
 
           <div className="p-8 rounded-2xl bg-white border border-[#e2ded4] space-y-4">
             <h3 className="font-headline text-xl font-bold text-[#041d15]">
-              Một chạm NFC
+              Hộ chiếu số NFC định danh
             </h3>
             <p className="text-xs text-[#4a5548] leading-relaxed">
-              Kích hoạt bảo hành điện tử, tra cứu xuất xưởng và kết nối với chiếc balo học sinh tương ứng qua chip NFC nhúng ở quai đeo.
+              Mỗi sản phẩm có 1 chip NFC riêng. Chạm điện thoại để kích hoạt bảo hành điện tử 12 tháng, xem thông số xuất xưởng và nhật ký bảo trì số.
             </p>
             <Link to="/products/nfc-passport" className="text-xs font-mono font-bold text-[#041d15] hover:text-[#efbc5c] inline-block">
-              Mở hộ chiếu mẫu ↗
+              Trải nghiệm Product Passport ↗
             </Link>
           </div>
 
           <div className="p-8 rounded-2xl bg-white border border-[#e2ded4] space-y-4">
             <h3 className="font-headline text-xl font-bold text-[#041d15]">
-              Module đồng hành
+              Cơ chế trợ giá chéo B2N
             </h3>
             <p className="text-xs text-[#4a5548] leading-relaxed">
-              Dễ dàng mở rộng với đèn cắm trại đa năng tháo rời và tấm pin sơ cua 15W hỗ trợ sạc nhanh chuẩn bị lên kệ.
+              Một phần lợi nhuận từ mỗi chiếc balo GuiNang Trail bạn sở hữu sẽ trực tiếp hỗ trợ chi phí vận chuyển và bảo trì cặp đèn cho các em học sinh bản cao.
             </p>
-            <Link to="/products/technology" className="text-xs font-mono font-bold text-[#041d15] hover:text-[#efbc5c] inline-block">
-              Khám phá phụ kiện ↗
+            <Link to="/impact" className="text-xs font-mono font-bold text-[#041d15] hover:text-[#efbc5c] inline-block">
+              Xem Hành trình Ánh Sáng ↗
             </Link>
           </div>
         </div>
@@ -269,4 +256,3 @@ export default function ProductProPage() {
     </div>
   );
 }
-

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sun, Heart, MapPin, Users, Award, ArrowRight } from 'lucide-react';
+import { Sun, Heart, MapPin, Users, Award, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function CongTroiPage() {
   const sponsors = [
-    { name: 'Cộng đồng Trekker Đà Nẵng', type: 'Nhóm đồng hành', count: '50 Balo' },
-    { name: 'Quỹ Năng Lượng Xanh Miền Trung', type: 'Đơn vị bảo trợ', count: '60 Balo' },
-    { name: 'CLB Sinh Viên Kinh Tế Số DUE', type: 'Ban tổ chức', count: '40 Balo' },
-    { name: 'Công ty Cổ phần Công nghệ Xanh A&B', type: 'Doanh nghiệp CSR', count: '50 Balo' },
-    { name: '50+ Nhà hảo tâm & Trekker cá nhân', type: 'Cộng đồng đóng góp', count: '50 Balo' },
+    { name: 'Cộng đồng Trekker Đà Nẵng & Hội leo núi', type: 'Nhóm đồng hành', count: '60 Bộ GuiNang Edu' },
+    { name: 'Quỹ Năng Lượng Xanh Miền Trung', type: 'Đơn vị bảo trợ', count: '80 Bộ GuiNang Edu' },
+    { name: 'Khoa Thương mại điện tử, Marketing và Công nghệ số – Trường ĐH Kinh tế – ĐH Đà Nẵng', type: 'Đơn vị bảo trợ học thuật', count: '40 Bộ GuiNang Edu' },
+    { name: 'Công ty Cổ phần Công nghệ Xanh A&B', type: 'Doanh nghiệp CSR', count: '50 Bộ GuiNang Edu' },
+    { name: '70+ Nhà hảo tâm & Trekker cá nhân', type: 'Cộng đồng đóng góp', count: '70 Bộ GuiNang Edu' },
   ];
 
   return (
@@ -24,14 +24,13 @@ export default function CongTroiPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="text-xs font-mono font-bold tracking-widest text-[#efbc5c] uppercase bg-black/40 px-3.5 py-1.5 rounded-full border border-[#efbc5c]/30">
-            CHIẾN DỊCH CỘNG ĐỒNG 2026
+            CHIẾN DỊCH THỰC ĐỊA 2026 · HÀNH TRÌNH ÁNH SÁNG
           </span>
-          <h1 className="font-headline text-4xl sm:text-6xl font-bold text-white tracking-tight uppercase">
-            Cõng trời trên bản — <br />
-            <span className="text-[#efbc5c] font-serif italic normal-case">Tây Giang 2026</span>
+          <h1 className="font-headline text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight uppercase">
+            Cõng trời trên bản — <span className="text-[#efbc5c] font-serif italic normal-case whitespace-normal sm:whitespace-nowrap">Tây Giang & Nam Trà My 2026</span>
           </h1>
-          <p className="max-w-xl mx-auto text-sm sm:text-base text-[#d2ded0]">
-            250 chiếc balo năng lượng mặt trời. 250 nguồn sáng thắp lên những ước mơ con chữ giữa trập trùng sương mây biên cương.
+          <p className="max-w-xl mx-auto text-sm sm:text-base text-[#d2ded0] leading-relaxed">
+            300 bộ cặp năng lượng mặt trời GuiNang Edu. 300 nguồn sáng thắp lên những ước mơ con chữ giữa trập trùng sương mây biên cương xứ Quảng.
           </p>
         </div>
       </section>
@@ -42,20 +41,20 @@ export default function CongTroiPage() {
           
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs font-mono font-bold tracking-widest text-[#7c8663] uppercase">
-              NHẬT KÝ THỰC ĐỊA
+              NHẬT KÝ KHẢO SÁT & TRAO TẶNG THỰC ĐỊA
             </span>
-            <h2 className="font-headline text-3xl sm:text-4xl font-bold text-[#041d15] leading-tight">
-              Ánh sáng đến nơi, <br />hành trình học tập đi tiếp.
+            <h2 className="font-headline text-2xl sm:text-3xl lg:text-4xl font-bold text-[#041d15] leading-tight">
+              Ánh sáng đến nơi — hành trình học tập đi tiếp
             </h2>
             <div className="prose text-xs sm:text-sm text-[#4a5548] space-y-4 leading-relaxed font-sans">
               <p>
-                Từ trung tâm thành phố Đà Nẵng, đoàn tình nguyện SolarBag cùng các porter bản địa vượt hơn 150km đường đèo dốc hiểm trở hướng về huyện vùng cao Tây Giang, tỉnh Quảng Nam.
+                Từ Xưởng Trạm Nắng tại trung tâm Đà Nẵng, đoàn nghiên cứu và tình nguyện GuiNang vượt hơn 160km đường đèo dốc hiểm trở về các xã biên giới Ch’Ơm, Ga Ry (Tây Giang) và Trà Cang (Nam Trà My), tỉnh Quảng Nam.
               </p>
               <p>
-                Tại các xã biên giới Axan, Ch'Ơm, nhiều thôn bản vẫn chưa có lưới điện quốc gia. Mỗi buổi chiều tà, bóng tối phủ kín những mái nhà sàn, cũng là lúc việc học của các em học sinh gặp muôn vàn khó khăn.
+                Khảo sát thực địa ghi nhận hơn 65% học sinh tại các điểm trường lẻ phải học dưới ngọn đèn dầu hoặc nến leo lét trong điều kiện không có điện lưới quốc gia. Khói bồ hóng cay mắt và nguy cơ cháy nổ là nỗi lo thường trực mỗi đêm học bài.
               </p>
               <p>
-                Chiến dịch "Cõng trời trên bản" đã trực tiếp trao tận tay 250 chiếc balo SolarBag Lite cho các em nhỏ trường tiểu học bán trú. Chiếc balo với tấm sạc dẻo CIGS thu nhận ánh nắng ban ngày và tháo rời thành chiếc đèn bàn ấm áp ban đêm, mang lại sự an tâm cho các thầy cô và gia đình.
+                Đợt 1 chiến dịch "Cõng trời trên bản" trao tận tay 300 bộ GuiNang Edu cho các em nhỏ trường bán trú. Tấm solar 5V–3W đón nắng trên đường đi bộ 2 giờ tới trường; về nhà, đèn Solar Lamp 70g tháo rời tự động bật sáng nhờ mạch cảm biến MOSFET IRF4905, xua tan bóng tối bản cao suốt 6–8 tiếng liên tục.
               </p>
             </div>
           </div>
@@ -71,10 +70,10 @@ export default function CongTroiPage() {
             {/* Handwritten Note Sticky */}
             <div className="absolute -bottom-6 -left-4 sm:left-6 bg-[#E3DCC8] border border-[#C2562B]/30 p-4 rounded-xl shadow-lg -rotate-2 max-w-xs">
               <p className="font-handwriting text-lg text-[#1F3D2B] leading-snug">
-                "Ánh điện chưa tới nhưng con chữ không được tối. Cảm ơn SolarBag!"
+                "Ánh điện chưa tới nhưng con chữ không được tối. Cảm ơn GuiNang!"
               </p>
               <p className="font-serif italic text-xs text-[#C2562B] font-semibold mt-1">
-                — Lời thầy giáo tại điểm trường Axan, Tây Giang
+                — Lời thầy cô giáo tại điểm trường Ch'Ơm, Tây Giang
               </p>
             </div>
           </div>
@@ -88,13 +87,13 @@ export default function CongTroiPage() {
           
           <div className="text-center space-y-2">
             <span className="text-xs font-mono font-bold tracking-widest text-[#7c8663] uppercase">
-              SPONSOR WALL
+              BẢNG VÀNG ĐỒNG HÀNH CSR & CỘNG ĐỒNG
             </span>
             <h2 className="font-headline text-3xl sm:text-4xl font-bold text-[#041d15]">
               Cùng gùi một nguồn sáng
             </h2>
             <p className="text-sm text-[#4a5548]">
-              Tri ân các đơn vị bảo trợ, câu lạc bộ và cá nhân đã tiếp sức cho chiến dịch Tây Giang 2026.
+              Tri ân các đơn vị bảo trợ, câu lạc bộ, doanh nghiệp và cá nhân đã tiếp sức cho chiến dịch Tây Giang & Nam Trà My 2026.
             </p>
           </div>
 
@@ -107,7 +106,7 @@ export default function CongTroiPage() {
                 <h3 className="font-headline text-lg font-bold text-[#041d15] pt-1">
                   {s.name}
                 </h3>
-                <p className="text-xs font-mono font-semibold text-emerald-800">
+                <p className="text-xs font-mono font-semibold text-[#c2562b]">
                   {s.count}
                 </p>
               </div>
@@ -117,9 +116,9 @@ export default function CongTroiPage() {
           <div className="text-center pt-4">
             <Link
               to="/impact/join"
-              className="px-8 py-3.5 bg-[#041d15] text-[#efbc5c] hover:bg-[#072b20] rounded-xl font-headline font-bold text-sm inline-flex items-center gap-2"
+              className="px-8 py-3.5 bg-[#c2562b] text-white hover:bg-[#a6451e] rounded-xl font-headline font-bold text-sm inline-flex items-center gap-2 shadow-md transition-all"
             >
-              Cùng tham gia đợt trao tặng tiếp theo ↗
+              Cùng tham gia đợt trao tặng tiếp theo (880.000đ/bộ) <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
@@ -129,4 +128,3 @@ export default function CongTroiPage() {
     </div>
   );
 }
-

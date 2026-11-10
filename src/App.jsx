@@ -71,6 +71,8 @@ export default function App() {
               <Route index element={<ProductsPage />} />
               <Route path="solarbag-pro" element={<ProductProPage />} />
               <Route path="solarbag-lite" element={<ProductLitePage />} />
+              <Route path="guinang-trail" element={<ProductProPage />} />
+              <Route path="guinang-edu" element={<ProductLitePage />} />
               <Route path="technology" element={<TechnologyPage />} />
               <Route path="nfc-passport" element={<NfcPassportPage />} />
             </Route>

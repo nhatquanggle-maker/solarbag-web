@@ -34,30 +34,22 @@ export default function Navbar() {
       label: 'Sản phẩm',
       path: '/products',
       dropdown: [
-        { label: 'Danh mục sản phẩm', path: '/products', desc: 'Hai dòng balo, những module phụ kiện linh hoạt' },
-        { label: 'Công nghệ & hướng dẫn', path: '/products/technology', desc: 'Quang điện CIGS dẻo và mạch sạc bảo vệ BMS' },
+        { label: 'Danh mục sản phẩm', path: '/products', desc: 'GuiNang Trail & GuiNang Edu' },
+        { label: 'Công nghệ & mạch sạc', path: '/products/technology', desc: 'Tấm solar, pin 18650 & cảm biến MOSFET IRF4905' },
         { label: 'Hộ chiếu số NFC', path: '/products/nfc-passport', desc: 'Một chạm xác thực nguồn gốc và bảo hành điện tử' },
       ]
     },
     {
       label: 'Hành trình khám phá',
-      path: '/explore',
-      dropdown: [
-        { label: 'Tổng quan khám phá', path: '/explore', desc: 'Hệ sinh thái ngoài trời bền bỉ và tự do' },
-        { label: 'Thư viện tuyến đường', path: '/explore/trails', desc: 'Hồ sơ các cung đường trekking đón nắng đẹp nhất' },
-        { label: 'Cung đường Lảo Thẩn', path: '/explore/trails/lao-than', desc: 'Hành trình 2.860m đi giữa những tầng mây Y Tý' },
-        { label: 'Lập kế hoạch & checklist', path: '/explore/planner', desc: 'Tính nhu cầu sạc và tạo checklist mang theo' },
-        { label: 'SolarBag App', path: '/explore/app', desc: 'Ứng dụng theo dõi năng lượng và bản đồ ngoại tuyến' },
-      ]
+      path: '/explore'
     },
     {
       label: 'Hành trình ánh sáng',
       path: '/impact',
       dropdown: [
-        { label: 'Tổng quan cộng đồng', path: '/impact', desc: 'Mỗi hành trình khám phá là một nguồn sáng sẻ chia' },
-        { label: 'Đồng hành cùng chúng tôi', path: '/impact/join', desc: 'Góp balo, tài trợ CSR hoặc tham gia thực địa' },
-        { label: 'Minh bạch & báo cáo', path: '/impact/transparency', desc: 'Theo dõi đóng góp và tiến độ trao tặng rõ ràng' },
-        { label: 'Cõng trời trên bản', path: '/impact/cong-troi-tren-ban', desc: 'Chiến dịch đưa 250 balo ánh sáng đến Tây Giang' },
+        { label: 'Tổng quan cộng đồng', path: '/impact', desc: 'Kết nối nguồn lực và trao gửi ánh sáng học đường' },
+        { label: 'Đồng hành cùng chúng tôi', path: '/impact/join', desc: 'Tài trợ gói GuiNang Edu, hợp tác CSR hoặc thiện nguyện' },
+        { label: 'Minh bạch & báo cáo', path: '/impact/transparency', desc: 'Theo dõi tiến độ trao tặng qua Donation Tracking NFC' },
       ]
     },
     {
@@ -82,25 +74,25 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 bg-[#fbf9f4]/95 backdrop-blur-md border-b border-[#e5e0d3] transition-all">
+      <header className="sticky top-0 z-40 bg-[#fbf9f4]/95 backdrop-blur-md border-b border-[#e5e0d3] transition-all shadow-xs">
         <div className="w-full max-w-[1440px] mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 sm:h-24 gap-2">
+          <div className="flex items-center justify-between h-24 sm:h-28 gap-3 sm:gap-4">
             
             {/* Brand Logo & Tagline (Shrink-0 to protect width) */}
-            <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+            <Link to="/" className="flex items-center gap-3 sm:gap-4 group shrink-0 py-1">
               <div className="relative flex items-center justify-center">
                 <img 
-                  src="/assets/svg/sun-logo.svg" 
-                  alt="SolarBag Logo" 
-                  className="w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-500 group-hover:rotate-45"
+                  src="/assets/images/logo.png" 
+                  alt="Gùi Nắng - SolarBag Logo" 
+                  className="h-16 sm:h-20 lg:h-22 w-auto max-w-[160px] sm:max-w-[200px] object-contain transition-transform duration-300 group-hover:scale-105 drop-shadow-sm"
                 />
               </div>
-              <div className="flex flex-col">
-                <span className="font-headline text-2xl sm:text-3xl font-bold tracking-tight text-[#1F3D2B] leading-none">
-                  SolarBag
+              <div className="flex flex-col justify-center">
+                <span className="font-headline text-2xl sm:text-3xl lg:text-[32px] font-bold tracking-tight text-[#1F3D2B] leading-none">
+                  GuiNang
                 </span>
-                <span className="font-serif italic text-[10px] sm:text-[11px] text-[#5E7A45] font-medium tracking-wide mt-1 whitespace-nowrap">
-                  Mỗi hành trình, một nguồn sáng
+                <span className="font-serif italic text-xs sm:text-sm text-[#5E7A45] font-semibold tracking-wide mt-1.5 whitespace-nowrap">
+                  Nắng theo chân, sáng muôn miền
                 </span>
               </div>
             </Link>

@@ -17,20 +17,25 @@ export default function Footer() {
           
           {/* Brand Info Left Column */}
           <div className="lg:col-span-5 space-y-6">
-            <Link to="/" className="inline-flex items-center gap-3 group">
+            <Link to="/" className="inline-flex items-center gap-4 group">
               <img 
-                src="/assets/svg/sun-logo.svg" 
-                alt="SolarBag Emblem" 
-                className="w-11 h-11 transition-transform group-hover:rotate-45 duration-500" 
+                src="/assets/images/logo.png" 
+                alt="GuiNang - Gùi Nắng Logo" 
+                className="h-20 sm:h-24 lg:h-28 w-auto object-contain transition-transform group-hover:scale-105 duration-300 logo-glow" 
               />
-              <span className="font-headline text-3xl font-bold tracking-tight text-[#FFFFFF]">
-                SolarBag
-              </span>
+              <div className="flex flex-col justify-center">
+                <span className="font-headline text-3xl sm:text-4xl font-bold tracking-tight text-[#FFFFFF] leading-none">
+                  GuiNang
+                </span>
+                <span className="font-serif italic text-sm text-[#F2B632] mt-1.5 tracking-wide">
+                  Công ty TNHH GuiNang · Gùi Nắng
+                </span>
+              </div>
             </Link>
 
             <div>
               <p className="font-serif italic text-[#F2B632] text-xl font-medium tracking-wide">
-                Mỗi hành trình, một nguồn sáng.
+                Nắng theo chân, sáng muôn miền.
               </p>
               <p className="font-handwriting text-[#8FA8B6] text-base mt-1 tracking-wider">
                 ~ Đi giữa những tầng mây, gửi lại ánh sáng nơi bản làng ~
@@ -38,7 +43,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm leading-relaxed text-[#E3DCC8]/90 max-w-md">
-              Giải pháp balo năng lượng mặt trời dành cho những hành trình khám phá và sứ mệnh mang ánh sáng tri thức đến các điểm trường vùng cao.
+              Hệ sinh thái sản phẩm và giải pháp công nghệ ứng dụng năng lượng mặt trời: kết nối hai hành trình giá trị Khám Phá (GuiNang Trail) và Ánh Sáng (GuiNang Edu).
             </p>
 
             {/* Social Links */}
@@ -68,19 +73,7 @@ export default function Footer() {
               </a>
 
               <a 
-                href="https://youtube.com" 
-                target="_blank" 
-                rel="noreferrer"
-                aria-label="YouTube"
-                className="w-9 h-9 rounded-full bg-[#162C1F] border border-[#5E7A45]/50 flex items-center justify-center text-[#F2B632] hover:bg-[#F2B632] hover:text-[#1F3D2B] transition-all"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </a>
-
-              <a 
-                href="mailto:contact@solarbag.vn" 
+                href="mailto:contact@guinang.vn" 
                 aria-label="Mail"
                 className="w-9 h-9 rounded-full bg-[#162C1F] border border-[#5E7A45]/50 flex items-center justify-center text-[#F2B632] hover:bg-[#F2B632] hover:text-[#1F3D2B] transition-all"
               >
@@ -94,30 +87,30 @@ export default function Footer() {
           {/* Links Columns Right */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
             
-            {/* Column 1: MUA SẮM */}
+            {/* Column 1: SẢN PHẨM */}
             <div className="border-l border-[#5E7A45]/40 pl-5 sm:pl-6 space-y-4">
               <h3 className="font-headline text-[#F2B632] text-sm font-semibold tracking-wider uppercase">
-                MUA SẮM
+                SẢN PHẨM & CÔNG NGHỆ
               </h3>
               <ul className="space-y-3 text-sm">
                 <li>
                   <Link to="/products/solarbag-pro" className="hover:text-[#F2B632] transition-colors">
-                    SolarBag Pro
+                    GuiNang Trail (1.500.000đ)
                   </Link>
                 </li>
                 <li>
                   <Link to="/products/solarbag-lite" className="hover:text-[#F2B632] transition-colors">
-                    SolarBag Lite
+                    GuiNang Edu (880.000đ)
                   </Link>
                 </li>
                 <li>
-                  <Link to="/products" className="hover:text-[#F2B632] transition-colors">
-                    Tất cả sản phẩm
+                  <Link to="/products/technology" className="hover:text-[#F2B632] transition-colors">
+                    Đèn Solar Lamp (450.000đ)
                   </Link>
                 </li>
                 <li>
-                  <Link to="/support/warranty" className="hover:text-[#F2B632] transition-colors">
-                    Bảo hành & đổi trả
+                  <Link to="/products/nfc-passport" className="hover:text-[#F2B632] transition-colors">
+                    Hộ chiếu số Product Passport
                   </Link>
                 </li>
               </ul>
@@ -136,17 +129,17 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link to="/impact" className="hover:text-[#F2B632] transition-colors">
-                    Hành trình ánh sáng
+                    Hành trình ánh sáng (Edu)
                   </Link>
                 </li>
                 <li>
                   <Link to="/explore/app" className="hover:text-[#F2B632] transition-colors">
-                    Ứng dụng SolarBag
+                    Ứng dụng GuiNang App
                   </Link>
                 </li>
                 <li>
-                  <Link to="/impact/join" className="hover:text-[#F2B632] transition-colors">
-                    Hợp tác CSR
+                  <Link to="/impact/transparency" className="hover:text-[#F2B632] transition-colors">
+                    Minh bạch tài trợ (Donation Tracking)
                   </Link>
                 </li>
               </ul>
@@ -155,17 +148,12 @@ export default function Footer() {
             {/* Column 3: HỖ TRỢ */}
             <div className="border-l border-[#5E7A45]/40 pl-5 sm:pl-6 space-y-4">
               <h3 className="font-headline text-[#F2B632] text-sm font-semibold tracking-wider uppercase">
-                HỖ TRỢ
+                HỖ TRỢ & BẢO HÀNH
               </h3>
               <ul className="space-y-3 text-sm">
                 <li>
                   <Link to="/support/faq" className="hover:text-[#F2B632] transition-colors">
-                    Trung tâm hỗ trợ
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/support/faq" className="hover:text-[#F2B632] transition-colors">
-                    FAQ
+                    Trung tâm trợ giúp (FAQ)
                   </Link>
                 </li>
                 <li>
@@ -174,8 +162,13 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/support/warranty" className="hover:text-[#F2B632] transition-colors">
+                    Chính sách bảo hành Trạm Nắng
+                  </Link>
+                </li>
+                <li>
                   <Link to="/support/contact" className="hover:text-[#F2B632] transition-colors">
-                    Liên hệ & Ticket
+                    Liên hệ & Gửi ticket
                   </Link>
                 </li>
               </ul>
@@ -188,13 +181,13 @@ export default function Footer() {
         <div className="border-t border-[#5E7A45]/30 pt-8 pb-6">
           <div className="space-y-2">
             <h4 className="font-headline text-xs font-semibold tracking-widest text-[#F2B632] uppercase">
-              THÔNG TIN DOANH NGHIỆP
+              THÔNG TIN DOANH NGHIỆP DỰ ÁN
             </h4>
             <p className="text-sm text-[#E3DCC8]">
-              Dự án SolarBag • Đại học Kinh tế – Đại học Đà Nẵng • Email: contact@solarbag.vn • Hotline: 1900 6868
+              Công ty TNHH GuiNang • Trụ sở: Xưởng Trạm Nắng, TP. Đà Nẵng • Email: contact@guinang.vn • Hotline: (+84) 905.409.257
             </p>
             <p className="text-xs text-[#8FA8B6]">
-              Ý tưởng kinh doanh số Capstone 2026 — Đổi mới sáng tạo & Phát triển bền vững.
+              Đề án tham gia Cuộc thi Sinh viên Kinh doanh số 2026 (Digital Business Contest 2026) — Sinh viên Lớp 50K22.1, Khoa Thương mại điện tử, Marketing và Công nghệ số – Trường Đại học Kinh tế – Đại học Đà Nẵng.
             </p>
           </div>
         </div>
@@ -202,7 +195,7 @@ export default function Footer() {
         {/* Legal Divider & Bottom Row */}
         <div className="border-t border-[#5E7A45]/30 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#8FA8B6]">
           <p>
-            © 2026 SolarBag. All rights reserved.
+            © 2026 GuiNang (Gùi Nắng). All rights reserved.
           </p>
 
           <div className="flex items-center gap-3">

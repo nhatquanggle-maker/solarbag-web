@@ -98,7 +98,7 @@ app.post('/api/orders', (req, res) => {
       paymentMethod, items, totalAmount, discountAmount, finalTotal
     } = req.body;
 
-    const orderCode = 'SB-ORD-' + Math.floor(100000 + Math.random() * 900000);
+    const orderCode = 'GN-ORD-' + Math.floor(100000 + Math.random() * 900000);
     const itemsJson = JSON.stringify(items || []);
 
     const stmt = db.prepare(`
@@ -152,14 +152,14 @@ app.get('/api/orders/track/:code', (req, res) => {
 app.post('/api/sponsorships', (req, res) => {
   try {
     const { donorName, donorEmail, quantity, totalAmount, message } = req.body;
-    const sponsorCode = 'SB-DONOR-' + Math.floor(1000 + Math.random() * 9000);
+    const sponsorCode = 'GN-DONOR-' + Math.floor(1000 + Math.random() * 9000);
 
     const stmt = db.prepare(`
       INSERT INTO sponsorships (sponsor_code, donor_name, donor_email, quantity, total_amount, message)
       VALUES (?, ?, ?, ?, ?, ?)
     `);
 
-    stmt.run(sponsorCode, donorName, donorEmail, quantity || 1, totalAmount || 850000, message || '');
+    stmt.run(sponsorCode, donorName, donorEmail, quantity || 1, totalAmount || 880000, message || '');
 
     res.json({ success: true, sponsorCode, message: 'Thông tin tài trợ đã lưu vào SQLite!' });
   } catch (error) {
@@ -193,7 +193,7 @@ app.get('/api/sponsorships/track/:code', (req, res) => {
 app.post('/api/tickets', (req, res) => {
   try {
     const { name, phone, email, topic, message } = req.body;
-    const ticketCode = 'SB-TICKET-' + Math.floor(1000 + Math.random() * 9000);
+    const ticketCode = 'GN-TICKET-' + Math.floor(1000 + Math.random() * 9000);
 
     const stmt = db.prepare(`
       INSERT INTO tickets (ticket_code, name, phone, email, topic, message)
@@ -221,7 +221,7 @@ app.get('/api/tickets', (req, res) => {
 app.post('/api/warranty', (req, res) => {
   try {
     const { serialNumber, fullName, phone, issueDescription } = req.body;
-    const warrantyCode = 'BH-2026-' + Math.floor(1000 + Math.random() * 9000);
+    const warrantyCode = 'GN-RMA-' + Math.floor(1000 + Math.random() * 9000);
 
     const stmt = db.prepare(`
       INSERT INTO warranty_requests (warranty_code, serial_number, full_name, phone, issue_description)

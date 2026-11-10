@@ -38,13 +38,13 @@ export default function CheckoutPage() {
         </div>
         <div className="space-y-2">
           <span className="text-xs font-mono font-bold text-[#7c8663] uppercase">
-            MÃ ĐƠN HÀNG: SB-2026-DEMO
+            MÃ ĐƠN HÀNG: GN-2026-DEMO
           </span>
           <h1 className="font-headline text-3xl sm:text-4xl font-bold text-[#041d15]">
-            Đăng Ký Đặt Trước Thành Công!
+            Đăng Ký Đặt Hàng Trải Nghiệm Thành Công!
           </h1>
           <p className="text-sm text-[#4a5548] max-w-md mx-auto">
-            Cảm ơn bạn <strong>{formData.fullName || 'bạn'}</strong> đã đồng hành cùng SolarBag. Chúng mình đã gửi thư xác nhận đặt trước đến email <strong>{formData.email}</strong>.
+            Cảm ơn bạn <strong>{formData.fullName || 'bạn'}</strong> đã đồng hành cùng GuiNang. Chúng mình đã gửi thư xác nhận đặt hàng đến email <strong>{formData.email}</strong>.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function CheckoutPage() {
           <p><strong>Địa chỉ:</strong> {formData.address}, {formData.city}</p>
           <p><strong>Tổng giá trị ưu đãi:</strong> {finalTotal.toLocaleString('vi-VN')}đ (Thanh toán khi nhận hàng)</p>
           <p className="text-[#7c8663] italic pt-2 border-t border-[#e2ded4]">
-            * Đây là bản demo thử nghiệm dự án Capstone, không phát sinh giao dịch tiền tệ thực tế.
+            * Hệ thống thử nghiệm đề án Cuộc thi Sinh viên Kinh doanh số 2026 — Công ty TNHH GuiNang.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export default function CheckoutPage() {
             Một bước gần hơn với hành trình mới.
           </h1>
           <p className="text-xs sm:text-sm text-[#d2ded0]">
-            Bản xem trước nguyên mẫu — SolarBag đang trong giai đoạn thử nghiệm; hiện tiếp nhận đăng ký trải nghiệm với ưu đãi Early-Bird.
+            GuiNang — Nắng theo chân, sáng muôn miền. Tiếp nhận đăng ký trải nghiệm sản phẩm nguyên mẫu đợt 1 năm 2026.
           </p>
         </div>
       </section>

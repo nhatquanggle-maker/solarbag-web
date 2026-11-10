@@ -24,13 +24,13 @@ export default function FaqPage() {
       <section className="bg-[#041d15] text-[#f5f5e9] py-16 border-b border-[#124636] text-center">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
           <span className="text-xs font-mono font-bold tracking-widest text-[#efbc5c] uppercase">
-            SOLARBAG LUÔN LẮNG NGHE
+            GUINANG LUÔN LẮNG NGHE
           </span>
-          <h1 className="font-headline text-4xl sm:text-6xl font-bold text-white tracking-tight uppercase">
+          <h1 className="font-headline text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight uppercase whitespace-normal sm:whitespace-nowrap">
             Bạn cần một chút hướng dẫn?
           </h1>
           <p className="text-sm sm:text-base text-[#d2ded0] max-w-xl mx-auto">
-            Tìm kiếm câu trả lời nhanh chóng về công nghệ tấm pin CIGS, mạch bảo vệ pin BMS, chính sách đổi trả và dự án cộng đồng.
+            Tìm kiếm câu trả lời nhanh chóng về quang điện 5V–3W, mạch tự động TP4056 + MOSFET IRF4905, bảo hành Xưởng Trạm Nắng và dự án trợ giá cộng đồng.
           </p>
 
           <div className="max-w-md mx-auto relative pt-2">

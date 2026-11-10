@@ -75,6 +75,21 @@
   [class*="font-['Lora']"] {
     font-family: 'Noto Serif', Georgia, serif !important;
   }
+
+  /* Hiệu ứng hào quang / glow ánh sáng mặt trời nhẹ nhàng cho logo trên nền tối */
+  .logo-glow {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.85))
+            drop-shadow(0 0 10px rgba(239, 188, 92, 0.5))
+            drop-shadow(0 0 22px rgba(239, 188, 92, 0.3));
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  .logo-glow:hover,
+  .group:hover .logo-glow {
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.95))
+            drop-shadow(0 0 14px rgba(239, 188, 92, 0.75))
+            drop-shadow(0 0 28px rgba(239, 188, 92, 0.45));
+  }
 }
 
 /* Custom delicate scrollbar matching Brand Palette */

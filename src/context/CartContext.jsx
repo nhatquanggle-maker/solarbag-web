@@ -8,13 +8,13 @@ export function CartProvider({ children }) {
       const saved = localStorage.getItem('solarbag_cart');
       return saved ? JSON.parse(saved) : [
         {
-          id: 'solarbag-pro',
-          name: 'SolarBag Pro',
-          price: 1650000,
-          priceFormatted: '1.650.000đ',
+          id: 'guinang-trail',
+          name: 'GuiNang Trail',
+          price: 1500000,
+          priceFormatted: '1.500.000đ',
           quantity: 1,
           image: '/assets/images/f07df218a363e35785a95f4364dfb00b0a8ab664.png',
-          category: 'Flagship Edition'
+          category: 'Flagship Trail Series'
         }
       ];
     } catch {

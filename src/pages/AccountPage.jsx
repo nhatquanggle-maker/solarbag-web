@@ -68,12 +68,12 @@ export default function AccountPage() {
           // Fallback demo orders
           setOrders([
             {
-              order_code: 'SB-88912',
-              items: JSON.stringify([{ name: 'SolarBag Pro (Trekking Edition)', quantity: 1, price: 1650000 }]),
-              total_amount: 1650000,
+              order_code: 'GN-88912',
+              items: JSON.stringify([{ name: 'GuiNang Trail (Balo Outdoor Trekking)', quantity: 1, price: 1500000 }]),
+              total_amount: 1500000,
               customer_name: currentUser?.name || 'Khách hàng',
               payment_method: 'cod',
-              status: 'Đang vận chuyển',
+              status: 'Đang vận chuyển từ Xưởng Trạm Nắng',
               created_at: new Date().toISOString()
             }
           ]);
@@ -125,8 +125,8 @@ export default function AccountPage() {
         
         {/* Top Header Bar matching design */}
         <div className="flex items-center justify-between border-b border-[#5E7A45]/20 pb-4">
-          <div className="flex items-center gap-3">
-            <img src="/assets/svg/sun-logo.svg" alt="SolarBag" className="w-7 h-7" />
+          <div className="flex items-center gap-3.5">
+            <img src="/assets/images/logo-icon.png" alt="Gùi Nắng - SolarBag" className="w-12 h-12 object-contain drop-shadow-sm" />
             <span className="font-headline text-2xl font-bold text-[#1F3D2B] tracking-tight">SolarBag</span>
             {isAdmin && (
               <span className="px-2.5 py-0.5 rounded-full bg-[#C2562B] text-white font-mono text-[10px] font-bold uppercase tracking-wider">
@@ -488,7 +488,7 @@ export default function AccountPage() {
                         CHÍNH HÃNG XÁC THỰC
                       </span>
                       <h4 className="font-headline text-xl font-bold text-white">
-                        SolarBag Pro · Trekking 35L
+                        GuiNang Trail · Trekking 35L - 40L
                       </h4>
                       <p className="text-xs text-[#E3DCC8] font-mono">
                         NFC UID: 04:8F:A2:7B:19:6C:80
@@ -500,11 +500,11 @@ export default function AccountPage() {
                   <div className="grid grid-cols-3 gap-3 pt-4 border-t border-white/10 text-center">
                     <div className="p-3 rounded-xl bg-white/10">
                       <p className="text-[11px] text-[#E3DCC8]">Sức khỏe pin</p>
-                      <p className="font-headline text-lg font-bold text-[#F2B632]">98%</p>
+                      <p className="font-headline text-lg font-bold text-[#F2B632]">98% (37 Wh)</p>
                     </div>
                     <div className="p-3 rounded-xl bg-white/10">
-                      <p className="text-[11px] text-[#E3DCC8]">Hiệu suất CIGS</p>
-                      <p className="font-headline text-lg font-bold text-white">96%</p>
+                      <p className="text-[11px] text-[#E3DCC8]">Tấm Solar 6W</p>
+                      <p className="font-headline text-lg font-bold text-white">99%</p>
                     </div>
                     <div className="p-3 rounded-xl bg-white/10">
                       <p className="text-[11px] text-[#E3DCC8]">Bảo hành đến</p>
@@ -515,7 +515,7 @@ export default function AccountPage() {
                   <div className="flex items-center justify-between pt-2 text-xs">
                     <span className="text-[#E3DCC8] flex items-center gap-1.5">
                       <CheckCircle className="w-4 h-4 text-[#F2B632]" />
-                      Bảo hành 24 tháng chính hãng
+                      Bảo hành 12 tháng tại Xưởng Trạm Nắng
                     </span>
                     <Link
                       to="/products/nfc-passport"

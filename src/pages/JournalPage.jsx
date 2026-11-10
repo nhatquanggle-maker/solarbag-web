@@ -31,9 +31,8 @@ export default function JournalPage() {
           <span className="text-xs font-mono font-bold tracking-widest text-[#efbc5c] uppercase">
             THE SOLARBAG FIELD JOURNAL
           </span>
-          <h1 className="font-headline text-4xl sm:text-6xl font-bold text-white tracking-tight leading-tight uppercase">
-            Ghi lại từng bước. <br />
-            <span className="text-[#efbc5c] font-serif italic normal-case">Giữ lại từng tia nắng.</span>
+          <h1 className="font-headline text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight uppercase">
+            Ghi lại từng bước — <span className="text-[#efbc5c] font-serif italic normal-case whitespace-normal sm:whitespace-nowrap">Giữ lại từng tia nắng</span>
           </h1>
           <p className="text-sm sm:text-base text-[#d2ded0] max-w-xl mx-auto">
             Góc nhìn chân thực từ xưởng chế tạo, các cung đường trekking hiểm trở và hành trình thắp sáng những lớp học non cao.
@@ -184,13 +183,13 @@ export default function JournalPage() {
                 {readingArticle.excerpt}
               </p>
               <p>
-                Trên mỗi chặng đường khảo nghiệm, điều thử thách lớn nhất không chỉ là sức chịu tải của tấm quang điện CIGS dưới bức xạ mặt trời gay gắt, mà còn là làm sao để chiếc balo trở thành người bạn đồng hành thực thụ của người mang.
+                Trên mỗi chặng đường khảo nghiệm, điều thử thách lớn nhất không chỉ là độ bền chuyển đổi của module solar 5V–3W dưới bức xạ mặt trời gay gắt, mà còn là làm sao để chiếc balo trở thành người bạn đồng hành thực thụ của người mang.
               </p>
               <p>
-                Từ việc tính toán từng gram trọng lượng của hộp pin, thiết kế lớp thoáng lưng EVA tổ ong tránh đọng mồ hôi, cho đến công tắc từ tính gắn chiếc đèn học nhỏ gọn — tất cả đều được nhóm tinh chỉnh sau từng lần leo núi cùng các trekker.
+                Từ việc tính toán tối ưu từng gram trọng lượng (chuẩn 1.570g cho Trail, 925g cho Edu), thiết kế lớp đệm lưng EVA 3D mesh và khung trợ lực PE, cho đến ngàm cài đèn Solar Lamp 70g tự động kích hoạt nhờ MOSFET IRF4905 — tất cả đều được nhóm tinh chỉnh kỹ lưỡng tại Xưởng Trạm Nắng Đà Nẵng sau từng chuyến đi thực địa.
               </p>
               <p>
-                Đặc biệt, khoảnh khắc trao tặng nguyên mẫu SolarBag Lite tại điểm trường Tây Giang đã tiếp thêm động lực to lớn cho toàn đội ngũ. Ánh mắt hồn nhiên của các em học sinh khi tự tay bật chiếc đèn LED sáng rực giữa gian phòng tối là minh chứng rõ nhất cho sứ mệnh: "Mỗi hành trình, một nguồn sáng."
+                Đặc biệt, khoảnh khắc trao tặng những bộ GuiNang Edu đầu tiên tại các điểm trường Nam Trà My và Tây Giang đã tiếp thêm động lực to lớn cho toàn đội ngũ. Ánh mắt hồn nhiên của các em học sinh khi tự tay bật chiếc đèn LED sáng rực giữa gian phòng tối là minh chứng rõ nhất cho sứ mệnh: "Nắng theo chân, sáng muôn miền."
               </p>
             </div>
 

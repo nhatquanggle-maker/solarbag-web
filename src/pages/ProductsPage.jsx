@@ -16,9 +16,8 @@ export default function ProductsPage() {
                           p.description.toLowerCase().includes(searchQuery.toLowerCase());
     if (!matchesSearch) return false;
 
-    if (filterTab === 'PRO') return p.id.includes('pro');
-    if (filterTab === 'LITE') return p.id.includes('lite');
-    if (filterTab === 'ACCESSORIES') return p.category.includes('PHỤ KIỆN') || p.category.includes('MODULE');
+    if (filterTab === 'TRAIL') return p.id.includes('trail') || p.id.includes('pro');
+    if (filterTab === 'EDU') return p.id.includes('edu') || p.id.includes('lite');
     return true;
   });
 
@@ -29,14 +28,13 @@ export default function ProductsPage() {
       <section className="bg-[#041d15] text-[#f5f5e9] py-16 border-b border-[#124636]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <span className="text-xs font-mono font-bold tracking-widest text-[#efbc5c] uppercase">
-            THIẾT KẾ ĐỂ ĐỒNG HÀNH
+            HỆ SINH THÁI SẢN PHẨM GUINANG
           </span>
-          <h1 className="font-headline text-4xl sm:text-6xl font-bold text-white tracking-tight uppercase">
-            Mang theo nắng. <br />
-            <span className="text-[#efbc5c] font-serif italic normal-case">Đi xa theo cách của bạn.</span>
+          <h1 className="font-headline text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight uppercase">
+            Nắng theo chân — <span className="text-[#efbc5c] font-serif italic normal-case whitespace-normal sm:whitespace-nowrap">Sáng bừng muôn dặm đường</span>
           </h1>
-          <p className="text-sm sm:text-base text-[#d2ded0] max-w-xl mx-auto">
-            Hai dòng balo chuyên biệt, những module phụ kiện linh hoạt và một tinh thần phát triển công nghệ có trách nhiệm.
+          <p className="text-sm sm:text-base text-[#d2ded0] max-w-2xl mx-auto">
+            Hệ sinh thái kết hợp giữa sản phẩm vật lý (GuiNang Trail, GuiNang Edu), phần cứng chiếu sáng Solar Lamp và nền tảng số Website - App - Product Passport.
           </p>
         </div>
       </section>
@@ -52,7 +50,7 @@ export default function ProductsPage() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Balo, đèn tháo rời, tấm pin..."
+              placeholder="Tìm kiếm GuiNang Trail, GuiNang Edu..."
               className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-[#e2ded4] text-xs outline-none focus:border-[#efbc5c] text-[#1e261e] placeholder-[#a0ac9d]"
             />
           </div>
@@ -67,37 +65,27 @@ export default function ProductsPage() {
                   : 'bg-[#f4f0e6] text-[#4a5548] hover:bg-[#e8e4d8]'
               }`}
             >
-              Tất cả
+              Tất cả (2 Sản phẩm)
             </button>
             <button
-              onClick={() => setFilterTab('PRO')}
+              onClick={() => setFilterTab('TRAIL')}
               className={`px-4 py-2 rounded-full text-xs font-headline font-semibold tracking-wide whitespace-nowrap transition-all ${
-                filterTab === 'PRO'
+                filterTab === 'TRAIL'
                   ? 'bg-[#041d15] text-[#efbc5c]'
                   : 'bg-[#f4f0e6] text-[#4a5548] hover:bg-[#e8e4d8]'
               }`}
             >
-              Dòng Pro
+              GuiNang Trail (Outdoor)
             </button>
             <button
-              onClick={() => setFilterTab('LITE')}
+              onClick={() => setFilterTab('EDU')}
               className={`px-4 py-2 rounded-full text-xs font-headline font-semibold tracking-wide whitespace-nowrap transition-all ${
-                filterTab === 'LITE'
+                filterTab === 'EDU'
                   ? 'bg-[#041d15] text-[#efbc5c]'
                   : 'bg-[#f4f0e6] text-[#4a5548] hover:bg-[#e8e4d8]'
               }`}
             >
-              Dòng Lite
-            </button>
-            <button
-              onClick={() => setFilterTab('ACCESSORIES')}
-              className={`px-4 py-2 rounded-full text-xs font-headline font-semibold tracking-wide whitespace-nowrap transition-all ${
-                filterTab === 'ACCESSORIES'
-                  ? 'bg-[#041d15] text-[#efbc5c]'
-                  : 'bg-[#f4f0e6] text-[#4a5548] hover:bg-[#e8e4d8]'
-              }`}
-            >
-              Module phụ kiện
+              GuiNang Edu (Học sinh vùng cao)
             </button>
           </div>
 

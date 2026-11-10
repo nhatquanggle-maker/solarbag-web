@@ -18,11 +18,11 @@
 
 | Thành viên | Vai trò | Chuyên môn đảm nhiệm |
 | :--- | :--- | :--- |
-| **Nguyễn Thị Thanh Thảo** | **FOUNDER** | Khởi xướng & dẫn dắt sứ mệnh dự án SolarBag, hoạch định chiến lược tổng thể và kết nối đối tác CSR. |
-| **Lê Nhật Quang** | **GIÁM ĐỐC CÔNG NGHỆ (CTO)** | Nghiên cứu tích hợp tấm quang điện CIGS, mạch sạc thông minh BMS và phát triển hạ tầng số IoT. |
-| **Lê Ngọc Minh Khánh** | **GIÁM ĐỐC MARKETING (CMO)** | Lan tỏa thông điệp "Hai hành trình, một nguồn sáng", phát triển thương hiệu và cộng đồng outdoor. |
-| **Đào Ngọc Minh Kha** | **GIÁM ĐỐC CHIẾN LƯỢC & PHÁT TRIỂN (CSO/BDO)** | Xây dựng mô hình kinh doanh số, tiếp cận thị trường và mở rộng hợp tác tài trợ doanh nghiệp. |
-| **Trần Trần Thảo Ngọc** | **GIÁM ĐỐC SẢN PHẨM & VẬN HÀNH (CPO/COO)** | Thiết kế công thái học, chuỗi cung ứng vật liệu tái chế và quản trị vận hành thực địa. |
+| **Lê Nhật Quang** (Quang) | **GIÁM ĐỐC CÔNG NGHỆ (CTO)** | Hoàn thiện Website giới thiệu thành viên, xây dựng Website/App doanh nghiệp (demo web/app), nghiên cứu các tính năng công nghệ: IoT, GPS, NFC. |
+| **Trần Trần Thảo Ngọc** (Meo) | **GIÁM ĐỐC SẢN PHẨM & VẬN HÀNH (CPO/COO)** | Xây dựng kế hoạch tài chính (vốn đầu tư, chi phí, doanh thu, hoàn vốn), pilot sản phẩm, quay video và hoàn thiện thiết kế sản phẩm (Solar Bag & Solar Lamp). |
+| **Nguyễn Thị Thanh Thảo** (Thảo) | **FOUNDER & CEO** | Khởi xướng & dẫn dắt sứ mệnh dự án SolarBag, hoạch định tầm nhìn chiến lược tổng thể, điều hành toàn diện và kết nối mạng lưới đối tác CSR. |
+| **Lê Ngọc Minh Khánh** (Khánh) | **GIÁM ĐỐC MARKETING (CMO)** | Hoàn thiện Moodboard, xây dựng kế hoạch truyền thông tích hợp: SWOT, định vị thương hiệu, mục tiêu & KPI, chiến dịch Marketing, 4Ps, timeline. |
+| **Đào Ngọc Minh Kha** (Kha) | **GIÁM ĐỐC CHIẾN LƯỢC & PHÁT TRIỂN (CSO/BDO)** | Hoàn thiện nghiên cứu thị trường, xây dựng kế hoạch kinh doanh 4 giai đoạn (mốc thời gian, mục tiêu, chỉ tiêu KPI, hoạt động, rủi ro & giải pháp). |
 
 ---
 

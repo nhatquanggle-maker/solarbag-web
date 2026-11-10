@@ -9,21 +9,13 @@ const SUB_NAV_GROUPS = {
   ],
   products: [
     { label: 'Danh mục sản phẩm', path: '/products' },
-    { label: 'Công nghệ & hướng dẫn', path: '/products/technology' },
+    { label: 'Công nghệ & mạch sạc', path: '/products/technology' },
     { label: 'Hộ chiếu số NFC', path: '/products/nfc-passport' },
-  ],
-  explore: [
-    { label: 'Khám phá', path: '/explore' },
-    { label: 'Thư viện tuyến đường', path: '/explore/trails' },
-    { label: 'Chi tiết Lảo Thẩn', path: '/explore/trails/lao-than' },
-    { label: 'Lập kế hoạch & checklist', path: '/explore/planner' },
-    { label: 'SolarBag App', path: '/explore/app' },
   ],
   impact: [
     { label: 'Tổng quan cộng đồng', path: '/impact' },
     { label: 'Đồng hành cùng chúng tôi', path: '/impact/join' },
     { label: 'Minh bạch & báo cáo', path: '/impact/transparency' },
-    { label: 'Cõng trời trên bản', path: '/impact/cong-troi-tren-ban' },
   ],
   support: [
     { label: 'FAQ', path: '/support/faq' },

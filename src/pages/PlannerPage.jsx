@@ -31,10 +31,10 @@ export default function PlannerPage() {
     setChecklist(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
-  // Estimate energy needed: phone = 4000mAh, gps = 3000mAh, camera = 2000mAh, light = 1200mAh
-  const totalEnergyNeed = (phones * 4000 + gps * 3000 + cameras * 2000 + lights * 1200) * (days > 1 ? (days - 0.5) : 1);
-  const solarBagProCapacity = 10000;
-  const solarGenPerDay = 5000; // estimated CIGS generation per sunny day
+  // Estimate energy needed: phone = 3000mAh, gps = 2000mAh, camera = 1500mAh, light = 800mAh
+  const totalEnergyNeed = (phones * 3000 + gps * 2000 + cameras * 1500 + lights * 800) * (days > 1 ? (days - 0.5) : 1);
+  const solarBagProCapacity = 5000; // Pin Li-ion 18650 5.000 mAh (~37 Wh)
+  const solarGenPerDay = 3500; // estimated 2x 5V-3W solar panels (6W) generation per sunny day
   const netDeficit = Math.max(0, totalEnergyNeed - (solarBagProCapacity + solarGenPerDay * (days - 1)));
 
   const completedChecks = Object.values(checklist).filter(Boolean).length;
@@ -220,12 +220,12 @@ export default function PlannerPage() {
                 Tổng nhu cầu: {Math.round(totalEnergyNeed).toLocaleString('vi-VN')} mAh
               </p>
               <p className="text-xs text-[#d2ded0]">
-                Ước tính SolarBag Pro (10.000 mAh) + Tấm CIGS nạp ban ngày ({Math.round(solarGenPerDay * (days - 1)).toLocaleString('vi-VN')} mAh) = Đủ đáp ứng 95% năng lượng.
+                Ước tính GuiNang Trail (Pin 18650 5.000 mAh ~ 37 Wh) + 2 Tấm Solar 6W nạp ban ngày ({Math.round(solarGenPerDay * (days - 1)).toLocaleString('vi-VN')} mAh) = Đủ đáp ứng 95% năng lượng dã ngoại.
               </p>
             </div>
             <div className="shrink-0 text-right">
               <span className="px-4 py-2 rounded-full bg-[#efbc5c] text-[#041d15] font-headline font-bold text-xs">
-                Khuyên dùng: SolarBag Pro 10.000 mAh
+                Khuyên dùng: GuiNang Trail 40L (1.500.000đ)
               </span>
             </div>
           </div>

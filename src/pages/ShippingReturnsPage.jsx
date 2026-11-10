@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Truck, RotateCcw, PackageCheck, Search, CheckCircle2 } from 'lucide-react';
 
 export default function ShippingReturnsPage() {
-  const [orderCode, setOrderCode] = useState('SB-DEMO-ORDER');
+  const [orderCode, setOrderCode] = useState('GN-DEMO-ORDER');
   const [orderStatus, setOrderStatus] = useState(null);
 
   const handleTrack = (e) => {
@@ -10,10 +10,10 @@ export default function ShippingReturnsPage() {
     if (orderCode.trim()) {
       setOrderStatus({
         code: orderCode.toUpperCase(),
-        carrier: 'Giao Hàng Tiết Kiệm (GHTK)',
-        status: 'Đang vận chuyển đến trạm trung chuyển Đà Nẵng',
+        carrier: 'Giao Hàng Tiết Kiệm (GHTK) / Viettel Post',
+        status: 'Đang xuất kho từ Xưởng Trạm Nắng Đà Nẵng',
         eta: 'Dự kiến giao ngày mai (Trước 17:00)',
-        items: '01 × SolarBag Pro (Bản Early-Bird kèm thẻ NFC)'
+        items: '01 × GuiNang Trail 40L (Kèm chip NFC Product Passport)'
       });
     }
   };
@@ -27,9 +27,8 @@ export default function ShippingReturnsPage() {
           <span className="text-xs font-mono font-bold tracking-widest text-[#efbc5c] uppercase">
             AN TÂM TRÊN TỪNG CHẶNG
           </span>
-          <h1 className="font-headline text-4xl sm:text-6xl font-bold text-white tracking-tight uppercase">
-            Rõ ràng khi nhận. <br />
-            <span className="text-[#efbc5c] font-serif italic normal-case">Thuận tiện khi cần hỗ trợ.</span>
+          <h1 className="font-headline text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight uppercase">
+            Giao nhận minh bạch — <span className="text-[#efbc5c] font-serif italic normal-case whitespace-normal sm:whitespace-nowrap">Hỗ trợ trọn hành trình</span>
           </h1>
           <p className="text-sm sm:text-base text-[#d2ded0] max-w-xl mx-auto">
             Chính sách giao hàng toàn quốc và quy trình đổi mới 30 ngày bảo vệ tối đa trải nghiệm người dùng.

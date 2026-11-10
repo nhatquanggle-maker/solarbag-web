@@ -33,7 +33,7 @@ export default function TrailDetailLaoThanPage() {
             Lảo Thẩn — <span className="text-[#efbc5c] font-serif italic normal-case">Đi giữa những tầng mây</span>
           </h1>
           <p className="max-w-xl mx-auto text-sm sm:text-base text-[#d2ded0]">
-            Nóc nhà Y Tý với độ cao 2.860m. Cung đường đồi cỏ đón nắng trọn vẹn, thử thách khả năng tích lũy năng lượng của SolarBag Pro.
+            Nóc nhà Y Tý với độ cao 2.860m. Cung đường đồi cỏ đón nắng trọn vẹn, thử thách hoàn hảo cho khả năng tích lũy quang năng của GuiNang Trail.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -111,7 +111,7 @@ export default function TrailDetailLaoThanPage() {
                 </span>
                 <h4 className="font-headline text-base font-bold text-[#041d15]">Chân núi Phìn Hồ</h4>
                 <p className="text-xs text-[#4a5548]">
-                  Điểm xuất phát, gửi xe và bổ sung nước suối cuối cùng. Bắt đầu bật sạc CIGS.
+                  Điểm xuất phát, gửi xe và bổ sung nước suối cuối cùng. Bắt đầu tiếp nhận quang năng qua 2 tấm solar 5V–3W.
                 </p>
               </div>
 
@@ -204,14 +204,14 @@ export default function TrailDetailLaoThanPage() {
                 {proProduct.name}
               </h3>
               <p className="text-xs text-[#4a5548] leading-relaxed">
-                Dung lượng pin 10.000 mAh đủ sạc 2-3 lần điện thoại và máy ảnh định vị GPS trong 48 giờ ở vùng không có điện lưới.
+                Pin Li-ion 18650 5.000 mAh (37 Wh) cùng 2 tấm solar 5V–3W và mạch tự động TP4056 + MOSFET IRF4905, đảm bảo nguồn sạc dự phòng điện thoại và đèn LED COB 3W tháo rời suốt 48 giờ ở đỉnh núi không có điện lưới.
               </p>
               <div className="pt-2">
                 <Link
-                  to="/products/solarbag-pro"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#041d15] text-[#efbc5c] hover:bg-[#072b20] rounded-lg font-headline font-bold text-sm transition-colors"
+                  to="/products/guinang-trail"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#041d15] text-[#efbc5c] hover:bg-[#072b20] rounded-xl font-headline font-bold text-sm transition-colors shadow"
                 >
-                  Xem SolarBag Pro ↗
+                  Xem GuiNang Trail (1.500.000đ) ↗
                 </Link>
               </div>
             </div>

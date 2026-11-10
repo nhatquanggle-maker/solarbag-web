@@ -61,9 +61,9 @@ export default function LoginModal() {
             <X className="w-4 h-4" />
           </button>
 
-          <div className="flex items-center gap-2 mb-2">
-            <img src="/assets/svg/sun-logo.svg" alt="SolarBag" className="w-6 h-6" />
-            <span className="font-headline text-lg tracking-wider text-[#F2B632]">SOLARBAG ACCOUNT</span>
+          <div className="flex items-center gap-3 mb-3">
+            <img src="/assets/brand/brand_logo.png" alt="Gùi Nắng - GuiNang" className="w-10 h-10 object-contain drop-shadow-sm" />
+            <span className="font-headline text-lg tracking-wider text-[#F2B632]">GUINANG ACCOUNT</span>
           </div>
           <h3 className="font-headline text-2xl font-bold tracking-tight text-white">
             {authMode === 'login' ? 'Chào mừng bạn quay lại' : 'Tạo tài khoản thành viên'}

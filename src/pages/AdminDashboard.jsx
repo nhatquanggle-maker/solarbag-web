@@ -67,20 +67,20 @@ export default function AdminDashboard() {
       city: 'Đà Nẵng',
       paymentMethod: 'cod',
       items: [
-        { id: 'solarbag-pro', name: 'SolarBag Pro', quantity: 1, price: 1650000 },
-        { id: 'lamp-multipurpose', name: 'Đèn tháo rời SolarLight', quantity: 1, price: 220000 }
+        { id: 'solarbag-pro', name: 'GuiNang Trail', quantity: 1, price: 1500000 },
+        { id: 'lamp-multipurpose', name: 'Đèn Solar Lamp Đa Năng', quantity: 1, price: 450000 }
       ],
-      totalAmount: 1870000,
-      discountAmount: 374000,
-      finalTotal: 1496000
+      totalAmount: 1950000,
+      discountAmount: 195000,
+      finalTotal: 1755000
     });
 
     await api.createSponsorship({
       donorName: 'Cộng đồng Trekker Đà Nẵng',
       donorEmail: 'trekkingdn@gmail.com',
       quantity: 5,
-      totalAmount: 4250000,
-      message: 'Chúc các em học sinh điểm trường Lăng luôn vững bước đến trường!'
+      totalAmount: 4400000,
+      message: 'Chúc các em học sinh Trường Phổ thông DTBT Trà Cang, Nam Trà My luôn vững bước đến trường!'
     });
 
     await api.createTicket({
@@ -88,14 +88,14 @@ export default function AdminDashboard() {
       phone: '0988776655',
       email: 'yenle@yahoo.com',
       topic: 'Hỗ trợ kỹ thuật & Pin sạc',
-      message: 'Tấm pin CIGS trên balo sau khi uốn cong có cần lưu ý bảo quản gì không ạ?'
+      message: 'Tấm solar 5V-3W trên balo có thể tháo rời để vệ sinh bằng khăn ẩm được không?'
     });
 
     await api.createWarranty({
-      serialNumber: 'SB-DEMO-PRO-0089',
+      serialNumber: 'GN-TRAIL-2026-0089',
       fullName: 'Nguyễn Anh Tuấn',
       phone: '0912334455',
-      issueDescription: 'Đèn LED bị lỏng ngàm nam châm sau chuyến trekking Tà Xùa'
+      issueDescription: 'Kiểm tra độ nhạy mạch cảm biến MOSFET IRF4905 sau chuyến trekking Tà Xùa'
     });
 
     await loadAllData();

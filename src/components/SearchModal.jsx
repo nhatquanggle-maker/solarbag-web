@@ -36,7 +36,7 @@ export default function SearchModal({ isOpen, onClose }) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Tìm balo, cung đường, công nghệ CIGS, bảo hành..."
+            placeholder="Tìm GuiNang Trail, GuiNang Edu, Solar Lamp, cung đường, mạch sạc..."
             className="w-full px-4 py-4 text-sm bg-transparent outline-none placeholder-[#a0ac9d] text-[#1e261e]"
             autoFocus
           />
@@ -59,29 +59,29 @@ export default function SearchModal({ isOpen, onClose }) {
                   onClick={() => handleSelect('/products/solarbag-pro')}
                   className="p-3 text-left bg-white rounded-lg border border-[#e2ded4] hover:border-[#efbc5c] hover:bg-[#fbf8ee] transition-all"
                 >
-                  <span className="font-semibold text-sm text-[#041d15] block">SolarBag Pro</span>
-                  <span className="text-xs text-[#6c776b]">Balo trekking tích hợp CIGS 15W</span>
+                  <span className="font-semibold text-sm text-[#041d15] block">GuiNang Trail</span>
+                  <span className="text-xs text-[#6c776b]">Balo trekking tích hợp đèn Solar Lamp (1.500.000đ)</span>
                 </button>
                 <button
                   onClick={() => handleSelect('/products/solarbag-lite')}
                   className="p-3 text-left bg-white rounded-lg border border-[#e2ded4] hover:border-[#efbc5c] hover:bg-[#fbf8ee] transition-all"
                 >
-                  <span className="font-semibold text-sm text-[#041d15] block">SolarBag Lite</span>
-                  <span className="text-xs text-[#6c776b]">Balo học sinh vùng cao & đèn học</span>
+                  <span className="font-semibold text-sm text-[#041d15] block">GuiNang Edu</span>
+                  <span className="text-xs text-[#6c776b]">Cặp học sinh & đèn học tháo rời (880.000đ)</span>
                 </button>
                 <button
                   onClick={() => handleSelect('/explore/trails/lao-than')}
                   className="p-3 text-left bg-white rounded-lg border border-[#e2ded4] hover:border-[#efbc5c] hover:bg-[#fbf8ee] transition-all"
                 >
                   <span className="font-semibold text-sm text-[#041d15] block">Tuyến Lảo Thẩn 2.860m</span>
-                  <span className="text-xs text-[#6c776b]">Hồ sơ tuyến & thử nghiệm nắng</span>
+                  <span className="text-xs text-[#6c776b]">Hồ sơ tuyến & thử nghiệm thực địa</span>
                 </button>
                 <button
                   onClick={() => handleSelect('/products/technology')}
                   className="p-3 text-left bg-white rounded-lg border border-[#e2ded4] hover:border-[#efbc5c] hover:bg-[#fbf8ee] transition-all"
                 >
-                  <span className="font-semibold text-sm text-[#041d15] block">Công nghệ CIGS & Mạch BMS</span>
-                  <span className="text-xs text-[#6c776b]">Bảo vệ dòng sạc và pin Grade A</span>
+                  <span className="font-semibold text-sm text-[#041d15] block">Đèn Solar Lamp & Mạch TP4056</span>
+                  <span className="text-xs text-[#6c776b]">Cảm biến MOSFET IRF4905 & Pin 18650</span>
                 </button>
               </div>
             </div>
